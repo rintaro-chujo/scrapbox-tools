@@ -2,7 +2,11 @@
   'use strict';
 
   const cfg = window.SCRAPBOX_TOOLS_CONFIG || {};
-  const projectName = cfg.projectName || 'rchujo';
+  const projectName = cfg.projectName;
+  if (!projectName) {
+    console.error('SCRAPBOX_TOOLS_CONFIG.projectName is required.');
+    return;
+  }
 
   scrapbox.PopupMenu.addButton({
     title: 'Note',

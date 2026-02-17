@@ -1,9 +1,15 @@
 (function() {
   'use strict';
 
-  import('/api/code/rchujo/scrapbox-shortcut/script.js');
   const cfg = window.SCRAPBOX_TOOLS_CONFIG || {};
-  const projectName = cfg.projectName || 'rchujo';
+  const projectName = cfg.projectName;
+  if (!projectName) {
+    console.error('SCRAPBOX_TOOLS_CONFIG.projectName is required.');
+    return;
+  }
+  if (cfg.shortcutScriptUrl) {
+    import(cfg.shortcutScriptUrl);
+  }
 
   function openTodayNote() {
     const today = new Date();

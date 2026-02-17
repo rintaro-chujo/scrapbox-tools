@@ -2,7 +2,11 @@
   'use strict';
 
   const cfg = window.SCRAPBOX_TOOLS_CONFIG || {};
-  const PROJECT_NAME = cfg.projectName || 'rchujo';
+  const PROJECT_NAME = cfg.projectName;
+  if (!PROJECT_NAME) {
+    console.error('SCRAPBOX_TOOLS_CONFIG.projectName is required.');
+    return;
+  }
   const POST_URL = cfg.fabPostUrl || 'https://scrapbox-notes.vercel.app/';
 
   const ICONS = {

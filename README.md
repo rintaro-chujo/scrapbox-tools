@@ -1,6 +1,6 @@
 # scrapbox-tools
 
-Scrapbox/Cosense Userscripts and CSS extracted from the `rchujo` project pages and organized for public hosting.
+Scrapbox/Cosense Userscripts and CSS extracted from Scrapbox pages and organized for public hosting.
 
 ## Structure
 - `userscripts/` JavaScript userscripts
@@ -16,12 +16,13 @@ code:script.js
 window.SCRAPBOX_TOOLS_CONFIG = {
   adobeKitId: "YOUR_KIT_ID",
   adobeFontFamily: "'yu-gothic-pr6n', sans-serif",
-  projectName: "rchujo",
+  projectName: "YOUR_PROJECT_NAME",
   gyazoAccessToken: "YOUR_GYAZO_API_TOKEN",
   fabPostUrl: "https://scrapbox-notes.vercel.app/",
-  publicProjectName: "rchujo-public",
-  privateProjectName: "rchujo-private",
-  notepadPageTitle: "rchujo's note"
+  shortcutScriptUrl: "https://scrapbox.io/api/code/YOUR_PROJECT/scrapbox-shortcut/script.js",
+  publicProjectName: "YOUR_PROJECT_NAME-public",
+  privateProjectName: "YOUR_PROJECT_NAME-private",
+  notepadPageTitle: "YOUR_PROJECT_NAME's note"
 };
 
 import "https://cdn.jsdelivr.net/gh/rintaro-chujo/scrapbox-tools@main/userscripts/main.js";

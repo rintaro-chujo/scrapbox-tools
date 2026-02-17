@@ -2,8 +2,12 @@
   'use strict';
 
   const cfg = window.SCRAPBOX_TOOLS_CONFIG || {};
-  const PROJECT_NAME = cfg.projectName || 'your-project-name';
-  const GYAZO_ACCESS_TOKEN = cfg.gyazoAccessToken || 'YOUR_GYAZO_API_TOKEN';
+  const PROJECT_NAME = cfg.projectName;
+  const GYAZO_ACCESS_TOKEN = cfg.gyazoAccessToken;
+  if (!PROJECT_NAME || !GYAZO_ACCESS_TOKEN) {
+    console.error('SCRAPBOX_TOOLS_CONFIG.projectName and gyazoAccessToken are required.');
+    return;
+  }
 
   const ICONS = {
     CAMERA: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>`,
