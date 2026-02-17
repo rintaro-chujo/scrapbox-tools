@@ -16,7 +16,12 @@ code:script.js
 window.SCRAPBOX_TOOLS_CONFIG = {
   adobeKitId: "YOUR_KIT_ID",
   adobeFontFamily: "'yu-gothic-pr6n', sans-serif",
-  projectName: "rchujo"
+  projectName: "rchujo",
+  gyazoAccessToken: "YOUR_GYAZO_API_TOKEN",
+  fabPostUrl: "https://scrapbox-notes.vercel.app/",
+  publicProjectName: "rchujo-public",
+  privateProjectName: "rchujo-private",
+  notepadPageTitle: "rchujo's note"
 };
 
 import "https://cdn.jsdelivr.net/gh/rintaro-chujo/scrapbox-tools@main/userscripts/main.js";

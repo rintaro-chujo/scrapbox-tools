@@ -1,6 +1,10 @@
 (function() {
   'use strict';
 
+  const cfg = window.SCRAPBOX_TOOLS_CONFIG || {};
+  const projectName = cfg.projectName || 'rchujo';
+  const publicProjectName = cfg.publicProjectName || `${projectName}-public`;
+
   function exportPage(projectName) {
     if (document.domain != 'scrapbox.io') return;
     if (!scrapbox || scrapbox.Layout !== 'page') return;
@@ -20,7 +24,7 @@
 
   scrapbox.PageMenu.addItem({
     title: 'Send to Public',
-    onClick: () => exportPage('rchujo-public'),
+    onClick: () => exportPage(publicProjectName),
   });
 
   scrapbox.PageMenu.addItem({

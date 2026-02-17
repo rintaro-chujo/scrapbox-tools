@@ -2,6 +2,8 @@
   'use strict';
 
   import('/api/code/rchujo/scrapbox-shortcut/script.js');
+  const cfg = window.SCRAPBOX_TOOLS_CONFIG || {};
+  const projectName = cfg.projectName || 'rchujo';
 
   function openTodayNote() {
     const today = new Date();
@@ -9,7 +11,7 @@
     const month = String(today.getMonth() + 1).padStart(2, '0');
     const date = String(today.getDate()).padStart(2, '0');
     const todayNote = `${year}${month}${date}`;
-    location.href = `/rchujo/${todayNote}`;
+    location.href = `/${projectName}/${todayNote}`;
   }
 
   scrapboxShortcut.onBrowse('command+d', e => {
@@ -23,17 +25,17 @@
   });
 
   scrapboxShortcut.onBrowse('command+h', e => {
-    location.href = "/rchujo/";
+    location.href = `/${projectName}/`;
   });
   scrapboxShortcut.onSearch('command+h', e => {
-    location.href = "/rchujo/";
+    location.href = `/${projectName}/`;
   });
   scrapboxShortcut.onEdit('command+h', e => {
-    location.href = "/rchujo/";
+    location.href = `/${projectName}/`;
   });
 
   scrapboxShortcut.onBrowse('command+n', e => {
-    location.href = "/rchujo/new";
+    location.href = `/${projectName}/new`;
   });
 
   scrapboxShortcut.onBrowse('command+f', e => {
@@ -43,7 +45,7 @@
   });
 
   scrapboxShortcut.onSearch('command+n', e => {
-    location.href = "https://scrapbox.io/rchujo/new";
+    location.href = `https://scrapbox.io/${projectName}/new`;
   });
 
   scrapboxShortcut.onSearch('command+f', e => {
@@ -51,7 +53,7 @@
   });
 
   scrapboxShortcut.onEdit('command+n', e => {
-    location.href = "https://scrapbox.io/rchujo/new";
+    location.href = `https://scrapbox.io/${projectName}/new`;
   });
 
   scrapboxShortcut.onEdit('command+f', e => {
