@@ -1,14 +1,12 @@
 (function() {
   'use strict';
 
+  import './scrapbox-shortcut.js';
   const cfg = window.SCRAPBOX_TOOLS_CONFIG || {};
   const projectName = cfg.projectName;
   if (!projectName) {
     console.error('SCRAPBOX_TOOLS_CONFIG.projectName is required.');
     return;
-  }
-  if (cfg.shortcutScriptUrl) {
-    import(cfg.shortcutScriptUrl);
   }
 
   function openTodayNote() {
