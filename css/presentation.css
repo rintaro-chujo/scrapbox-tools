@@ -1,0 +1,129 @@
+.app.presentation .page-column {
+  grid-template-areas: "spacer page menu" !important;
+  grid-template-columns: 46px minmax(200px, 960px) min-content !important;
+}
+
+.app.presentation .line.section-title .text {
+  font-family: "Hiragino Sans";
+  font-weight: 700 !important;
+  text-align: left;
+  color: black !important;
+  font-size: 3vw;
+  margin-top: 2vw;
+  line-height: 1.5;
+}
+
+.app.presentation .line strong {
+  color: #ed7d31;
+}
+
+.app.presentation .container {
+  margin: 0;
+  max-width: none;
+}
+
+.app.presentation .line.section-0.section-title {
+  font-size: 6vw;
+  margin-bottom: 0.5em;
+  margin-top: calc(50vh - 6vw - 10vh);
+}
+
+.app.presentation .line.section-0.section-title .text {
+  font-size: 4vw !important;
+}
+
+.app.presentation .line strong.level-2 {
+  font-family: "Hiragino Sans";
+  font-weight: 700 !important;
+  text-align: left;
+  color: black !important;
+  font-size: 3vw;
+  margin-top: calc(50vh - 6vh - 2vw - 1.5vw);
+  line-height: 1.5;
+}
+
+.app.presentation .line {
+  font-family: "Hiragino Sans";
+  font-weight: 300;
+  color: #595959;
+  line-height: 1.5;
+  font-size: 2.5vw;
+}
+
+.app.presentation .page {
+  padding: 6vh 0;
+}
+
+.app.presentation .col-page {
+  width: calc(100% - 120px);
+  min-width: 80vw;
+  max-width: 90vw;
+}
+
+.app.presentation .col-page-side {
+  width: 60px;
+}
+
+.app.presentation a[type="hashTag"]{
+  display: none !important;
+}
+
+.app.presentation .line .dot {
+  width: .8vw;
+  height: .8vw;
+  top: calc(.8em - .25vw);
+  right: 1vw;
+}
+
+.app.presentation .line .indent-mark .dot {
+  background-color: #dfdfdf;
+}
+
+.app.presentation .deco-\# {
+  top: 25vh;
+  position: relative;
+}
+.app.presentation .deco-\* {
+  font-family: "Hiragino Sans";
+}
+
+.app.presentation .deco-\~ {
+  font-family: "Hiragino Sans";
+}
+.app.presentation .deco-\+ {
+  font-family: "Hiragino Sans";
+}
+
+.app.presentation .section-title a.page-link {
+  color: black !important;
+}
+
+.app.presentation .line a.page-link {
+  color: #595959;
+}
+
+.app.presentation .line .strong-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  z-index: 9999;
+  max-height: none;
+  max-width: none;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.app.presentation {
+  --page-bg: #fff;
+  --body-bg: #ffffff;
+  --cursor-color: black;
+}
+
+html[data-display-style*=presentation] body {
+  background-color: #fff;
+}

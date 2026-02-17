@@ -1,0 +1,39 @@
+body:has(.search-result-list) .navbar {
+  display: block !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+body:has(.search-result-list) .container {
+  margin-top: 70px !important;
+  padding-top: 10px;
+}
+
+body:has(.search-result-list) .navbar .row {
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  display: flex;
+}
+
+body:has(.search-result-list) .navbar .row .col-search {
+  display: block !important;
+  width: 100% !important;
+  max-width: 600px;
+  text-align: center;
+}
+
+body:has(.search-result-list) .new-button {
+  display: none;
+}
+
+body:has(.search-result-list) .navbar-form {
+  margin: 0 auto;
+  width: 100%;
+}

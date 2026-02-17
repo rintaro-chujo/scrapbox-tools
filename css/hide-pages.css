@@ -1,0 +1,8 @@
+.page-list .grid li.page-list-item[data-page-title="settings"],
+.page-list .grid li.page-list-item[data-page-title$="CSS"],
+.page-list .grid li.page-list-item[data-page-title$="UserScript"],
+.page-list .grid li.page-list-item[data-page-title$="_JP"],
+.page-list .grid li.page-list-item[data-page-title$="_EN"],
+.page-list .grid li.page-list-item[data-page-title*="."] {
+  display: none;
+}

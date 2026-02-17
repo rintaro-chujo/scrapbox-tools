@@ -1,0 +1,16 @@
+.line .level-4 {
+  color: #DF8B0E;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.line .level-2 {
+  display: inline-block;
+  padding-left: 12px;
+  margin-bottom: 6px;
+  border-left: 6px solid white;
+}
+/* .line .level-1 {
+  color: #fff;
+  background-color: #1976d2;
+  padding: 0.1em 0.2em 0.1em 0.2em;
+} */

@@ -1,0 +1,26 @@
+.navbar .row .left { display: none; }
+.navbar .row .col-search { display: none; }
+.navbar .navbar-menu>li { display: none !important; }
+.navbar .search-button-xs { display: none; }
+
+.expandable-menu {
+  background: transparent;
+  top: 10px;
+  right: 10px;
+}
+
+.app {
+  padding-top: 0px;
+}
+
+.navbar {
+  transition: top 0.5s ease;
+  top: -120px;
+}
+.navbar.show{ top: 0; }
+.navbar .row { height: 40px; }
+
+.expandable-menu {
+  height: 48px;
+  border-radius: 8px;
+}

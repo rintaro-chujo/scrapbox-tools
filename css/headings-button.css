@@ -1,0 +1,3 @@
+button#Headings.tool-btn:hover { text-decoration: none }
+button#Headings.tool-btn::before { position: absolute; content: '\f1dc'; font: 900 21px/46px 'Font Awesome 5 Free' }
+button#Headings.tool-btn img { opacity: 0 }

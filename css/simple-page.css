@@ -1,0 +1,75 @@
+:root {
+  --bg-color:  black !important;
+  --fg-color:  #252525 !important;
+  --highlight: #6BA6DE !important;
+  --default:   black !important;
+  --navbar-bg: black !important;
+  --page-bg: black !important;
+  --new-button-bg: black !important;
+  --card-bg: black !important;
+  --new-button-hover-bg: black !important;
+  --body-bg: black !important;
+  --code-bg: #222 !important;
+  --page-link-color: rgb(240, 90, 36) !important;
+  --card-description-link-color: rgb(240, 90, 36) !important;
+  --empty-page-link-color: rgb(250, 180, 19) !important;
+}
+
+/* --- .page-menu hover reveal + unified buttons --- */
+.page-menu {
+  position: fixed;
+  bottom: 15px;
+  right: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 5px;
+  min-height: 50px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.page-menu > * {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0s 0.2s;
+}
+
+.page-menu:hover > * {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.page-menu .tool-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #555;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  margin: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-menu .tool-btn:hover {
+  background: rgba(100, 100, 100, 0.5);
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  color: #3d72f5 !important;
+}
+
+.page-menu .dropdown {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+}

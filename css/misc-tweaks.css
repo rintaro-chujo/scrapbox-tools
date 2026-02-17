@@ -1,0 +1,22 @@
+.line .indent-mark .dot {
+  height: .2em;
+  width: .4em;
+  top: auto;
+  bottom: 0;
+  background-color: rgba(173,173,173,.55)
+}
+body.presentation .line .indent-mark .dot { top: 12px; }
+
+.section-title + .line .table-block .cell {
+  font-weight: 600;
+  text-align: left;
+}
+
+.line img.icon {
+  vertical-align: bottom;
+}
+
+iframe.youtube {
+  max-width: 60%;
+  max-height: 25vw;
+}

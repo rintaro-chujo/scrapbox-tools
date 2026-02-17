@@ -1,0 +1,18 @@
+/* # tag as label */
+a[type="hashTag"]{
+  display: inline-block;
+  padding: 0 4px;
+  margin: 0 8px 10px 0;
+  font-size: 0.8em;
+  border: 1px solid gray;
+  border-radius: 3px;
+  transition: .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+a[type="hashTag"]:hover{
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  color: #0000FF;
+  border: 1px solid lightgray;
+}

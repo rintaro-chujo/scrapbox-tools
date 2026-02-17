@@ -1,0 +1,85 @@
+.line.line-title {
+  font-weight: bold !important;
+}
+
+.search-form .form-group input:focus, .search-form .form-group input.for-mobile {
+  color: white !important;
+  background-color: var(--search-form-text-color, rgba(255, 255, 255, 0.35)) !important;
+}
+
+.btn-search { display: none !important; }
+
+.navbar .row .project-home { background: transparent !important; }
+.history-back-button { display: none !important; }
+.navbar .navbar-menu>li .dropdown-toggle>.icon { display: none !important }
+.kamon-caret-down { display: none !important }
+
+.new-button div { display: none !important }
+.new-button::before {
+  content: '+';
+  font-weight: 500;
+  font-size: 28px;
+  color: #535863;
+}
+
+.mobile-search-toggle { color: #535863 !important }
+
+.grid li.page-list-item a {
+  border-radius: 6px;
+  box-shadow: none;
+  padding: 3px;
+}
+
+.new-button { background-color: transparent !important; }
+
+.dropdown-toggle img { display: block !important }
+
+.project-home img, .project-home span { display: none !important }
+.project-home::before {
+  content: '⌂';
+  font-weight: 400;
+  font-size: 24px;
+  color: #535863;
+}
+
+.project-home:hover{ background: black !important; }
+
+.grid li.page-list-item a .header {
+  color: #396bdd;
+  border-top: none;
+}
+
+body { margin-bottom: 20px; }
+
+.page { box-shadow: none; }
+
+.line .telomere .telomere-border { border-style: none; }
+
+.grid li.page-list-item a .pin {
+  background: linear-gradient(45deg, var(--card-backside, #aaa), var(--card-backside, #aaa) 50%, rgb(66,69,74) 50%, rgb(66,69,74));
+}
+
+.user-menu-dropdown .text { display: block; }
+
+.brand-icon { display: none !important }
+.navbar-brand::before {
+  content: '☰';
+  font-weight: 400;
+  font-size: 24px;
+  color: #535863;
+}
+
+#見出し img { width: 0; }
+
+button #見出し::before{
+  display: inline-block;
+  content: "\E07A";
+  font-family: "AppIcons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
