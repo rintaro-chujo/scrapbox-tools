@@ -1,7 +1,7 @@
+import './scrapbox-shortcut.js';
+
 (function() {
   'use strict';
-
-  import './scrapbox-shortcut.js';
   const cfg = window.SCRAPBOX_TOOLS_CONFIG || {};
   const projectName = cfg.projectName;
   if (!projectName) {
