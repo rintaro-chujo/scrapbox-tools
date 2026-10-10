@@ -32,6 +32,18 @@
     return `${yyyy}${mm}${dd}`;
   };
 
+  const fabApi = window.SCRAPBOX_TOOLS_FAB || (window.SCRAPBOX_TOOLS_FAB = {
+    buttons: [],
+    register(btn) {
+      if (!btn || !btn.id) return;
+      const idx = this.buttons.findIndex(b => b.id === btn.id);
+      if (idx >= 0) this.buttons[idx] = btn;
+      else this.buttons.push(btn);
+      if (typeof this.refresh === 'function') this.refresh();
+    },
+    refresh: null
+  });
+
   const createButtons = () => {
     cleanup();
 
@@ -66,7 +78,7 @@
         icon: ICONS.PLUS,
         target: ''
       }
-    ];
+    ].concat(fabApi.buttons || []);
 
     buttons.forEach(btnInfo => {
       const button = document.createElement('a');
@@ -75,6 +87,12 @@
       button.innerHTML = btnInfo.icon;
       if (btnInfo.target) {
         button.target = btnInfo.target;
+      }
+      if (btnInfo.onClick) {
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          btnInfo.onClick(e);
+        });
       }
       button.rel = 'noopener noreferrer';
       container.appendChild(button);
@@ -120,6 +138,7 @@
     console.log(`[UserScript] Scrapbox Floating Helper Buttons for /${PROJECT_NAME}/ initialized.`);
   };
 
+  fabApi.refresh = createButtons;
   createButtons();
 
   if (typeof scrapbox !== 'undefined' && scrapbox.addListener) {

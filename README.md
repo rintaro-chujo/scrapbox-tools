@@ -24,14 +24,14 @@ window.SCRAPBOX_TOOLS_CONFIG = {
   notepadPageTitle: "YOUR_PROJECT_NAME's note"
 };
 
-import "https://cdn.jsdelivr.net/gh/rintaro-chujo/scrapbox-tools@main/userscripts/main.js";
+import "https://cdn.jsdelivr.net/gh/rintaro-chujo/scrapbox-tools@master/userscripts/main.js";
 ```
 
 ### CSS
 In your Scrapbox project `settings` page:
 ```
 code:style.css
-@import "https://cdn.jsdelivr.net/gh/rintaro-chujo/scrapbox-tools@main/css/settings.css";
+@import "https://cdn.jsdelivr.net/gh/rintaro-chujo/scrapbox-tools@master/css/settings.css";
 ```
 
 ## Notes

@@ -107,39 +107,11 @@
     };
   };
 
-  const createButtons = () => {
-    const existing = document.getElementById('camera-floating-button');
-    if (existing) existing.remove();
-
-    const container = document.createElement('div');
-    container.id = 'camera-floating-button';
-
-    const btn = document.createElement('button');
-    btn.innerHTML = ICONS.CAMERA;
-    btn.title = "カメラで撮影してDailyNoteへ";
-    btn.onclick = startCamera;
-
-    container.appendChild(btn);
-    document.body.appendChild(container);
-
+  const ensureStyles = () => {
+    if (document.getElementById('camera-overlay-style')) return;
     const style = document.createElement('style');
+    style.id = 'camera-overlay-style';
     style.textContent = `
-      #camera-floating-button {
-        position: fixed;
-        bottom: 25px;
-        right: 60px;
-        z-index: 10000;
-      }
-      #camera-floating-button button {
-        width: 45px; height: 45px;
-        border-radius: 50%;
-        background: #007aff;
-        color: white;
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        display: flex; align-items: center; justify-content: center;
-      }
       #camera-overlay {
         position: fixed; top:0; left:0; width:100%; height:100%;
         background: black; z-index: 20000;
@@ -155,8 +127,21 @@
     document.head.appendChild(style);
   };
 
-  createButtons();
-  if (typeof scrapbox !== 'undefined' && scrapbox.addListener) {
-    scrapbox.addListener('layout:changed', createButtons);
+  ensureStyles();
+
+  const fabApi = window.SCRAPBOX_TOOLS_FAB;
+  if (fabApi && typeof fabApi.register === 'function') {
+    fabApi.register({
+      id: 'camera',
+      title: 'カメラで撮影してDailyNoteへ',
+      icon: ICONS.CAMERA,
+      href: '#',
+      onClick: () => {
+        ensureStyles();
+        startCamera();
+      }
+    });
+  } else {
+    console.warn('[UserScript] FAB API not found. Camera button was not registered.');
   }
 })();
